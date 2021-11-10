@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: smerrill726
+    provider: github
+    repository: mynodeapp
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: smerrill726-mynodeapp
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/smerrill726/mynodeapp.git
+  org: smerrill726
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: mynodeapp
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/smerrill726/mynodeapp

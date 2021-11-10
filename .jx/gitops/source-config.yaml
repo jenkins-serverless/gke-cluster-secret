@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: my-node-app
     - name: mynodeapp
     scheduler: in-repo
   slack:

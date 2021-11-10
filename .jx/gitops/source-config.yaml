@@ -11,6 +11,12 @@ spec:
     - name: my-node-app
     - name: mynodeapp
     scheduler: in-repo
+  - owner: serverless-bot-726
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: mynodeapp
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess

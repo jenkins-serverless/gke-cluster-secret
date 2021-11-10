@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - jenkins-serverless/gke-cluster-secret
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.34.66.164.168.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

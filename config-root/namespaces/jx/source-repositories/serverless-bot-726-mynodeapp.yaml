@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: serverless-bot-726
+    provider: github
+    repository: mynodeapp
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: serverless-bot-726-mynodeapp
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/serverless-bot-726/mynodeapp.git
+  org: serverless-bot-726
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: mynodeapp
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/serverless-bot-726/mynodeapp

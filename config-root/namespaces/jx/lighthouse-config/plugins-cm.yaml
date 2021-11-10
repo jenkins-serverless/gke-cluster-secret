@@ -6,6 +6,18 @@ data:
       repos:
       - jenkins-serverless/gke-cluster-secret
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - serverless-bot-726/mynodeapp
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - smerrill726/my-node-app
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - smerrill726/mynodeapp
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +33,21 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      serverless-bot-726/mynodeapp:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      smerrill726/my-node-app:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      smerrill726/mynodeapp:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +55,54 @@ data:
     plugins:
       jenkins-serverless/gke-cluster-secret:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      serverless-bot-726/mynodeapp:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      smerrill726/my-node-app:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      smerrill726/mynodeapp:
       - approve
       - assign
       - blunderbuss
@@ -55,6 +130,17 @@ data:
     - repos:
       - jenkins-serverless/gke-cluster-secret
       trusted_org: todo
+    - repos:
+      - serverless-bot-726/mynodeapp
+      trusted_org: todo
+    - repos:
+      - smerrill726/my-node-app
+      trusted_org: todo
+    - repos:
+      - smerrill726/mynodeapp
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         jenkins-serverless/gke-cluster-secret: true
+        smerrill726/my-node-app: true
+        smerrill726/mynodeapp: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         jenkins-serverless/gke-cluster-secret: merge
+        smerrill726/my-node-app: merge
+        smerrill726/mynodeapp: merge
       queries:
       - labels:
         - approved
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - jenkins-serverless/gke-cluster-secret
+        - smerrill726/my-node-app
+        - smerrill726/mynodeapp
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - jenkins-serverless/gke-cluster-secret
+        - smerrill726/my-node-app
+        - smerrill726/mynodeapp
       target_url: http://lighthouse-jx.34.66.164.168.nip.io/merge/status
 kind: ConfigMap
 metadata:
